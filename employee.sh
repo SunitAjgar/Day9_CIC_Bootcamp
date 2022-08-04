@@ -23,5 +23,18 @@ then
     salary=$(($empHrs*$empRatePerHr));
     echo "Employee daily wage is" $salary
 else
-    echo salary=0;
+    echo "If Employee is absent daily wage = 0";
+fi
+
+isPartTimeEmployeePresent=1;
+randomPartTimeCheckOne=$((RANDOM%2));
+
+if [ $isPartTimeEmployeePresent -eq $randomPartTimeCheckOne ];
+then
+    partTimeEmpRatePerHr=20;
+    partTimeEmpHrs=4;
+    salary=$(($partTimeEmpHrs*$partTimeEmpRatePerHr));
+    echo "If part time employee is present then its part time daily wage is" $salary
+else
+    echo "If part time employee is absent daily wage = 0";
 fi
