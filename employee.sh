@@ -60,3 +60,7 @@ esac
 salaryofemployee=$(($employeeHrs*$employeeRatePerHr));
 echo "employee of salary is" $salaryofemployee
 
+workingDay=20;
+employeeWagePerWorkingDay=160;
+employeeMonthlySalary=$(($workingDay*$employeeWagePerWorkingDay));
+echo "employee Monthly Salary" $employeeMonthlySalary
