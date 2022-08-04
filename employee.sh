@@ -12,3 +12,16 @@ then
 else
     echo "Employee is Absent";
 fi
+
+isEmployeePresent=1;
+randomCheckOne=$((RANDOM%2));
+
+if [ $isEmployeePresent -eq $randomCheckOne ];
+then
+    empRatePerHr=20;
+    empHrs=8;
+    salary=$(($empHrs*$empRatePerHr));
+    echo "Employee daily wage is" $salary
+else
+    echo salary=0;
+fi
