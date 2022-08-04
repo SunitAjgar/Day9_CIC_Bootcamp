@@ -38,3 +38,25 @@ then
 else
     echo "If part time employee is absent daily wage = 0";
 fi
+
+isPartTime=1;
+isFullTime=2;
+employeeRatePerHr=20;
+employeeCheck=$((RANDOM%3)) ;
+
+case $employeeCheck in
+        $isFullTime)
+           employeeHrs=8
+                       ;;
+
+        $isPartTime)
+            employeeHrs=4
+                        ;;
+            *)
+empHrs=0
+                        ;;
+esac 
+
+salaryofemployee=$(($employeeHrs*$employeeRatePerHr));
+echo "employee of salary is" $salaryofemployee
+
