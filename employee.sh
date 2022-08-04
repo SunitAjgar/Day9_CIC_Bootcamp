@@ -64,3 +64,32 @@ workingDay=20;
 employeeWagePerWorkingDay=160;
 employeeMonthlySalary=$(($workingDay*$employeeWagePerWorkingDay));
 echo "employee Monthly Salary" $employeeMonthlySalary
+
+
+Employee_Wage_per_hour=20
+Employee_Wage_per_day=160
+WH=100
+WD=20
+echo "1.for Working Hours"
+echo "2. for Working Days"
+read -p "enter your choice: " number
+case $number in
+1)
+read -p "enter the working hours: " workingHours
+    if [ $workinghours -ge $WH ]; then
+    employeeSalaryOnHourBasis=$(($workingHours*$Employee_Wage_per_hour))
+    echo "employee Salary On Hourly Basis is" $employeeSalaryOnHourBasis
+    else
+    echo "Enter the working hours which are greater than or equal to 100"
+    fi
+;;
+2)
+read -p "enter the working days: " workingDays
+    if [ $workingDays -ge $WD ]; then
+    employeeSalaryOnDayBasis=$(($workingDays*$Employee_Wage_per_day))
+    echo "employee Salary On the basis of number of working days is" $employeeSalaryOnDayBasis
+    else
+    echo "Enter the working days which are greater than or equal to 20"
+    fi
+    ;;
+    esac
